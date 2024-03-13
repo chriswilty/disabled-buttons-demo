@@ -4,10 +4,10 @@
 		"module": "ESNext",
 		"moduleResolution": "Bundler",
 		"target": "ES2022",
+		"noEmit": true,
 		"jsx": "react-jsx",
-		"allowImportingTsExtensions": true,
 		"noImplicitAny": true,
 		"sourceMap": true
 	},
-	"include": ["src", "vite.config.ts", ".eslintrc.cjs"]
+	"include": ["src", "vite.config.ts"]
 }
