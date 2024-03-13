@@ -1,0 +1,47 @@
+:root {
+	font-family: sans-serif;
+	color-scheme: light dark;
+	background-color: var(--bg-dark);
+	color: var(--text-light);
+	font-weight: 400;
+	line-height: 1;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	--text-light: rgba(255, 255, 255, 0.95);
+	--text-dark: rgba(0, 0, 0, 0.95);
+	--accent-light: #008888;
+	--accent-dark: #007777;
+	--bg-light: #eee;
+	--bg-light-disabled: #888;
+	--bg-dark: #111;
+	--bg-dark-disabled: #777;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		background-color: var(--bg-light);
+		color: var(--text-dark);
+	}
+}
+
+body {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+body * {
+	box-sizing: border-box;
+}
+
+*:focus-visible {
+	outline: 0.25rem solid teal;
+	outline-offset: 0.25rem;
+}

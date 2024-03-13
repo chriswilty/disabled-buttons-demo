@@ -1,0 +1,107 @@
+body {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+main,
+main section {
+	display: grid;
+	align-items: center;
+	gap: 0.75rem;
+	text-align: center;
+}
+
+main .boxed {
+	margin: 0;
+	border: 0.125rem solid var(--text-light);
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+
+main h1 {
+	font-size: 2rem;
+}
+
+main .value {
+	background-color: var(--accent-light);
+	font-size: 8rem;
+}
+
+main .control-box {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.75rem;
+	position: relative;
+}
+
+main button.boxed {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	position: relative;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	background-color: unset;
+	color: inherit;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+main button:active,
+main button:hover {
+	background-color: var(--accent-light);
+}
+main button[aria-disabled='true'] {
+	cursor: not-allowed;
+	background-color: var(--bg-light-disabled);
+	color: var(--text-dark);
+}
+main .tooltip {
+	position: absolute;
+	top: calc(100% + 0.75rem);
+	font-size: 1.25rem;
+	color: var(--text-light);
+	white-space: nowrap;
+	visibility: hidden;
+	opacity: 0;
+	height: 1px;
+}
+main button[aria-disabled='true']:hover ~ .tooltip,
+main button[aria-disabled='true']:focus-visible ~ .tooltip {
+	visibility: visible;
+	opacity: 1;
+	height: auto;
+	transition: opacity 200ms;
+}
+main button[aria-disabled='true']:hover ~ .tooltip {
+	transition-delay: 250ms;
+}
+main button .arrow {
+	font-size: 2rem;
+	line-height: 1;
+}
+
+@media (prefers-color-scheme: light) {
+	main .boxed {
+		border-color: var(--text-dark);
+	}
+	main .value,
+	main button:active,
+	main button:hover {
+		background-color: var(--accent-dark);
+	}
+	main button[aria-disabled='true'] {
+		background-color: var(--bg-dark-disabled);
+		color: var(--text-light);
+	}
+	main button[aria-disabled='true']:focus-visible::after,
+	main button[aria-disabled='true']:hover::after {
+		color: var(--text-dark);
+	}
+	main .tooltip {
+		color: var(--text-dark);
+	}
+}
