@@ -6,7 +6,9 @@ function App() {
 	const downIsDisabled = count <= 0;
 
 	const increment = () => setCount((prev) => prev + 1);
-	const decrement = () => setCount((prev) => Math.max(prev - 1, 0));
+	const decrement = () => {
+		!downIsDisabled && setCount((prev) => prev - 1);
+	};
 
 	return (
 		<main>
