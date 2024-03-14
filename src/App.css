@@ -81,7 +81,8 @@ main button[aria-disabled='true']:hover ~ .tooltip {
 }
 main button .icon {
 	font-size: 2rem;
-	line-height: 1;
+	line-height: 1.75rem;
+	padding-bottom: 0.25rem;
 }
 
 @media (prefers-color-scheme: light) {
@@ -96,10 +97,6 @@ main button .icon {
 	main button[aria-disabled='true'] {
 		background-color: var(--bg-dark-disabled);
 		color: var(--text-light);
-	}
-	main button[aria-disabled='true']:focus-visible::after,
-	main button[aria-disabled='true']:hover::after {
-		color: var(--text-dark);
 	}
 	main .tooltip {
 		color: var(--text-dark);
