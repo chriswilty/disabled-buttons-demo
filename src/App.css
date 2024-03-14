@@ -79,7 +79,7 @@ main button[aria-disabled='true']:focus-visible ~ .tooltip {
 main button[aria-disabled='true']:hover ~ .tooltip {
 	transition-delay: 250ms;
 }
-main button .arrow {
+main button .icon {
 	font-size: 2rem;
 	line-height: 1;
 }
