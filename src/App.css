@@ -81,7 +81,8 @@ main button[aria-disabled='true']:hover ~ .tooltip {
 }
 main button .icon {
 	font-size: 2rem;
-	line-height: 1;
+	line-height: 1.75rem;
+	padding-bottom: 0.25rem;
 }
 
 @media (prefers-color-scheme: light) {
