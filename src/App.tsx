@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
 	const [count, setCount] = useState(0);
 	const downIsDisabled = count <= 0;
 
@@ -12,14 +12,10 @@ function App() {
 
 	return (
 		<main>
-			<section aria-labelledby="count-heading">
-				<h1 id="count-heading" className="boxed">
-					Counter
-				</h1>
-				<div aria-live="polite" className="value boxed">
-					{count}
-				</div>
-			</section>
+			<h1 className="boxed">Counter</h1>
+			<div aria-description="value" aria-live="polite" className="value boxed">
+				{count}
+			</div>
 			<div className="control-box">
 				<button
 					aria-disabled={downIsDisabled}
@@ -29,7 +25,7 @@ function App() {
 				>
 					Minus
 					<span className="icon" aria-hidden="true">
-						-
+						&minus;
 					</span>
 				</button>
 				<div role="tooltip" id="why-disabled" className="tooltip">
@@ -44,6 +40,6 @@ function App() {
 			</div>
 		</main>
 	);
-}
+};
 
 export default App;
